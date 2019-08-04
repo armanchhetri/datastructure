@@ -148,25 +148,25 @@ class BST {
 
                     ellipse(0, 0, 70 - i, 70 - i);
                     fill(0);
-                    text(node.key, -2, -1);
+                    text(node.key, -4, -1);
                     fill(255);
                 }
             }
 
             pop();
-            let e = ellipse(0, 0, 50, 50);
+            let e = ellipse(0, 0, 40, 40);
             // e.setAttributes("class", "ellipse");
             fill(0);
             textSize(15);
-            text(node.key, -2, -1);
+            text(node.key, -4, -1);
             rotate(theta);
 
             if (node.left) {
-                strokeWeight(6);
-                translate(0, 25);
-                line(0, 0, 0, h - 25);
+                strokeWeight(4);
+                translate(0, 20);
+                line(0, 0, 0, h - 20);
                 strokeWeight(2);
-                translate(0, h - 25);
+                translate(0, h - 20);
             }
             this.preorder(node.left, theta * 0.5, h);
             pop();
@@ -184,11 +184,11 @@ class BST {
             rotate(-theta);
 
             if (node.right) {
-                strokeWeight(6);
-                translate(0, 25);
-                line(0, 0, 0, h - 25);
+                strokeWeight(4);
+                translate(0, 20);
+                line(0, 0, 0, h - 20);
                 strokeWeight(2);
-                translate(0, h - 25);
+                translate(0, h - 20);
             }
             this.preorder(node.right, theta * 0.8, h, 25);
             pop();
@@ -200,43 +200,43 @@ class BST {
     }
 
     search(key) {
-        nodee = this.findNode(this.root, key);
-        if (node)
-            return nodee.data;
-        else return null;
-    }
-    Max(node = this.root) {
-        if (node.right === null)
-            return node;
-        else
-            return this.Max(node.right);
-    }
-    Min(node = this.root) {
-        if (node.left === null)
-            return node;
-        else
-            return this.Min(node.left);
-    }
-    replaceWith(key, data) {
-        this.findNode(this.root, key).data = data;
-    }
+            nodee = this.findNode(this.root, key);
+            if (node)
+                return nodee.data;
+            else return null;
+        }
+        // Max(node = this.root) {
+        //     if (node.right === null)
+        //         return node;
+        //     else
+        //         return this.Max(node.right);
+        // }
+        // Min(node = this.root) {
+        //     if (node.left === null)
+        //         return node;
+        //     else
+        //         return this.Min(node.left);
+        // }
+        // replaceWith(key, data) {
+        //     this.findNode(this.root, key).data = data;
+        // }
 }
 
-function sleep(ms) {
-    const start = Date.now();
-    while (Date.now() < start + ms);
-}
+// function sleep(ms) {
+//     const start = Date.now();
+//     while (Date.now() < start + ms);
+// }
 
-function holdOn(millisecondsToWait)
+// function holdOn(millisecondsToWait)
 
-{
+// {
 
-    setTimeout(function() {
+//     setTimeout(function() {
 
-        console.log("Dude, hold on for asec!");
+//         console.log("Dude, hold on for asec!");
 
-        /* do something or nothing; this waits for a minute because 60000 milliseconds have been passed */
+//         /* do something or nothing; this waits for a minute because 60000 milliseconds have been passed */
 
-    }, millisecondsToWait);
+//     }, millisecondsToWait);
 
-}
+// }

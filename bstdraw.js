@@ -30,12 +30,12 @@ b.insert(45, "89");
 var theta;
 
 function setup() {
-    let can = createCanvas(window.innerWidth - 15, window.innerHeight - 90);
+    let can = createCanvas(window.innerWidth, window.innerHeight - 65);
 
     //input section
-    input[1] = createInput().attribute('type', 'number');
+    input[1] = createInput();
     input[1].attribute('placeholder', 'key');
-    input[1].position(40, 135);
+    input[1].position(40, 90);
 
 
     input[2] = createInput().attribute('type', 'text');
@@ -43,12 +43,12 @@ function setup() {
     input[2].position(input[1].x, input[1].y + input[1].height + 4);
 
 
-    input[3] = createInput().attribute('type', 'number');
+    input[3] = createInput();
     input[3].attribute('placeholder', 'key');
     input[3].position(input[1].x, input[2].y + input[2].height + 4);
 
 
-    input[4] = createInput().attribute('type', 'number');
+    input[4] = createInput();
     input[4].attribute('placeholder', 'key');
     input[4].position(input[1].x, input[3].y + input[3].height + 4);
 
@@ -78,7 +78,7 @@ function setup() {
     button[4].attribute('class', 'button');
 
     button[5] = createButton('InOrder');
-    button[5].position(input[4].x + input[4].width + 20, button[4].y + button[4].height + 32);
+    button[5].position(input[4].x + input[4].width + 35, button[4].y + button[4].height + 32);
     button[5].mousePressed(PressedInorder);
     button[5].attribute('class', 'butt');
 
@@ -88,7 +88,7 @@ function setup() {
     button[6].attribute('class', 'butt');
 
     button[7] = createButton('PreOrder');
-    button[7].position(input[4].x + button[6].width + 48, button[4].y + button[4].height + 32);
+    button[7].position(input[4].x, button[6].y + button[6].height + 32);
     button[7].mousePressed(PressedPreorder);
     button[7].attribute('class', 'butt');
 
@@ -109,7 +109,7 @@ function draw() {
 
 
     theta = (3.1415926 / 180.0) * angle;
-    x = width * (2 / 3);
+    x = width * (3 / 5);
     translate(x, 50);
 
     b.preorder(b.root, theta, 200);
@@ -208,7 +208,7 @@ function ShowText(val) {
     stroke(0, 255, 0);
     strokeWeight(3);
     fill(135, 76, 175, 200);
-    rect(-width * (2 / 3) + 40, 330, 380, 100);
+    rect(-width * (3 / 5) + 40, 330, 380, 70);
     // sleep(200);
     fill(0);
     noStroke();
@@ -216,7 +216,7 @@ function ShowText(val) {
     // fontSize(12);
 
     textSize(20);
-    text(val, -width * (2 / 3) + 154, 380);
+    text(val, -width * (2 / 3) + 154, 365);
     pop();
 }
 
