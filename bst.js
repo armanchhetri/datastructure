@@ -77,27 +77,7 @@ class BST {
             else
                 return this.findSucc(Node.left);
         }
-        // removeNode(rmNode) {
-        //     var child = this.hasOneChild(rmNode);
 
-    //     if (this.isLeaf(rmNode)) {
-    //         rmNode = null;
-    //         // console.log(rmNode.key);
-
-    //     } else if (child) {
-    //         console.log(child.key);
-    //         rmNode.key = child.key;
-    //         rmNode.data = child.data;
-    //         child = null;
-    //     } else {
-    //         // console.log("hey here");
-
-    //         var succ = this.findSucc(rmNode);
-    //         rmNode.key = succ.key;
-    //         rmNode.data = succ.data;
-    //         this.removeNode(succ);
-    //     }
-    // }
     remove(key) {
         this.root = this.removeNode(this.root, key);
 
